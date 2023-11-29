@@ -1,11 +1,12 @@
 import instance from './client';
-import { generateMockData } from '../mock/mock';
 export function getUserData(data) {
-  return instance.get('/api/user/list', data).catch(err => {
-    return generateMockData();
-  });
+  return instance.get('/api/user/list', data);
 }
 
-export function saveOrUpdateUserData(data) {
-  return instance.post('/api/user', data);
+export function saveUserData(data) {
+  return instance.put('/api/user', data);
+}
+
+export function updateUserData(id, data) {
+  return instance.post(`/api/user/${id}`, data);
 }

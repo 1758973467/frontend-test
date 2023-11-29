@@ -20,11 +20,17 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "moduleDetection": "auto"
+    "moduleDetection": "auto",
+    "paths": {
+      "@": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [
-    { "path": "./tsconfig.node.json" },
+    { 
+      "path": "./tsconfig.node.json",
+     },
+    
  ],
  "types" : [
   "element-plus/global"
